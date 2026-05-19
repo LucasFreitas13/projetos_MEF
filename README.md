@@ -14,3 +14,14 @@ Este projeto tem como objetivo implementar, do zero, um solver do Método dos El
 ---
 
 ## 📁 Estrutura do projeto
+Projetos/
+├── src/
+│ └── fem/
+│ ├── init.py
+│ ├── montagem.py
+│ ├── solver.py
+│ └── posprocessamento.py
+├── exemplos/
+│ ├── teste_matriz_rigidez.py
+│ └── teste_forca.py
+└── README.md
