@@ -13,7 +13,8 @@ Este projeto tem como objetivo implementar, do zero, um solver do Método dos El
 
 ---
 
-## 📁 Estrutura do projeto
+<pre>## 📁 Estrutura do projeto
+
 Projetos/
 ├── src/
 │ └── fem/
@@ -24,4 +25,4 @@ Projetos/
 ├── exemplos/
 │ ├── teste_matriz_rigidez.py
 │ └── teste_forca.py
-└── README.md
+└── README.md'''</pre>
