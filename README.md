@@ -13,8 +13,8 @@ Este projeto tem como objetivo implementar, do zero, um solver do Método dos El
 
 ---
 
-<pre>## 📁 Estrutura do projeto
-
+## 📁 Estrutura do projeto
+<pre>
 Projetos/
 ├── src/
 │ └── fem/
