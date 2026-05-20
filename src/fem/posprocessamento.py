@@ -25,9 +25,6 @@ def calcular_reacoes(K, u, F):
     return K @ u - F
 
 
-import numpy as np
-import matplotlib.pyplot as plt
-
 def plotar_resultados(u, L, E, A):
     """
     Plota os diagramas de deslocamento e força normal ao longo da barra.
@@ -60,20 +57,34 @@ def plotar_resultados(u, L, E, A):
     x_nos = np.linspace(0, L, nnos)
     x_elem = np.linspace(0, L, nnos - 1)
 
-    # Plot 1 - Força Normal
-    plt.figure()
+    # Subplots
+    plt.figure(figsize=(8, 6))
+
+
+    # 1. Força Normal
+    plt.subplot(3, 1, 1)
     plt.step(x_elem, N / 1000, where='post')
-    plt.xlabel('Comprimento [m]')
     plt.ylabel('Força Normal [kN]')
     plt.title('Diagrama de Força Normal')
     plt.grid()
 
-    # Plot 2 - Deslocamento
-    plt.figure()
+    # 2. Deformação
+    plt.subplot(3, 1, 2)
+    plt.step(x_elem, strain, where='post')
+    plt.ylabel('Deformação [-]')
+    plt.title('Diagrama de Deformação')
+    plt.grid()
+
+    # 3. Deslocamento
+    plt.subplot(3, 1, 3)
     plt.plot(x_nos, u * 1000, marker='o')
     plt.xlabel('Comprimento [m]')
     plt.ylabel('Deslocamento [mm]')
     plt.title('Diagrama de Deslocamento')
     plt.grid()
 
+    # Ajusta espaçamento automático
+    plt.tight_layout()
+
+    # Apresentação do plot
     plt.show()
